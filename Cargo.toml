@@ -22,8 +22,7 @@ plotters-backend = "0.3"
 plotters = "0.3"
 # if you are using egui then chances are you're using trunk which uses wasm bindgen
 instant = { version = "0.1", features = ["wasm-bindgen"], optional = true }
-[patch.crates-io]
-pathfinders = {version = "0.3.0", git = "https://github.com/servo/pathfinder.git", branch = "master"}
+
 
 [dev-dependencies]
 eframe = "0.28.1"
@@ -40,3 +39,7 @@ required-features = ["timechart"]
 [[example]]
 name = "timechart"
 required-features = ["timechart"]
+
+[patch.crates-io]
+plotters = { git = "https://github.com/m1el/plotters.git", branch = "master" }
+plotters-backend = { git = "https://github.com/m1el/plotters.git", branch = "master" }
